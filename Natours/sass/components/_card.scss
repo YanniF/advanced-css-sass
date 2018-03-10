@@ -117,12 +117,9 @@
 
   // back side styling
   &__cta {
-    position: absolute;
     text-align: center;
     width: 90%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include center-center;
   }
 
   &__price-box {
