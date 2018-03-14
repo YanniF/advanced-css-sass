@@ -27,6 +27,11 @@
     shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg); 
+   
+    @supports not(clip-path: circle(50% at 50% 50%)) {// Edge
+      border-radius: 50%;
+      overflow: hidden; 
+    }
 
     @include respond(phone) {
       transform: translateX(-3rem) skewX(0);
@@ -37,7 +42,7 @@
     height: 100%;
     transform: translateX(-4rem) scale(1.4);
     backface-visibility: hidden;
-    transition: all .5s;    
+    transition: all .5s;
   }
 
   &__text {
