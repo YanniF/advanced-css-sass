@@ -5,6 +5,7 @@
 - Projects
   - Natours
   - Trillo
+  - Nexter
 
 - Content
   - CSS architecture
