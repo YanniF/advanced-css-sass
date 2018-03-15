@@ -8,6 +8,7 @@
 
 - Content
   - CSS architecture
+  - Custom Properties (CSS variables)
   - Animations
   - SVG images
   - Flexbox
