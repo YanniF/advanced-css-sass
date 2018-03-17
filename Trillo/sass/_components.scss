@@ -11,6 +11,12 @@
   align-items: center;
   justify-content: center;
 
+  @media only screen and (max-width: $bp-smallest) {
+    order: 1;
+    flex: 0 0 100%;
+    background-color: var(--color-grey-light-2);
+  }
+
   &__input {
     font-family: inherit;
     font-size: inherit;
@@ -109,7 +115,6 @@
 }
 
 //---- SIDE NAVIGATION ----//
-
 .side-nav {
   font-size: 1.4rem;
   list-style: none;
@@ -211,6 +216,36 @@
 .gallery {
   display: flex;
 
+  &__item {
+    position: relative;
+    overflow: hidden; 
+  }
+
+  &__item:hover &__caption {
+    visibility: visible; 
+    opacity: 1;
+    left: 0;
+  }
+
+  &__caption {
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    padding: .7rem;
+    background-color: rgba(0,0,0, .6);
+    font-size: 1.2rem;
+    color: var(--color-grey-light-4);
+    visibility: hidden;
+    opacity: 0;
+    transition: all .6s cubic-bezier(1, 0, 0, 1);
+    
+    span {
+      display: block;
+      font-weight: 600;
+    }
+  }
+
   &__photo {
     width: 100%;
     display: block;
@@ -229,6 +264,11 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 1.5rem 3rem;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+      padding: 1.25rem;
+    }
   }
 
   &__stars {
@@ -262,17 +302,29 @@
     padding: 0 2.25rem;
     color: #fff;
     background-color: var(--color-primary);
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 0 1.5rem;
+    }
   }
 
   &__rating-average {
     font-size: 2.25rem;
     font-weight: 300;
     margin-bottom: -3px;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+    }
   }
 
   &__rating-count {
     font-size: .8rem;
     text-transform: uppercase;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: .8rem;
+    }
   }
 }
 
@@ -349,15 +401,17 @@
     height: 1rem;
     width: 1rem;
     margin-right: .7rem;
-
-    // older browsers
-    // background-image: url(../img/chevron-thin-right.svg);
-    // background-size: cover;
-
+    
     // modern browsers - masks
     background-color: var(--color-primary);
     mask-image: url(../img/chevron-thin-right.svg);
     mask-size: cover;
+
+    @supports not(mask-image: url()) {
+      background-image: url(../img/chevron-thin-right.svg);
+      background-size: cover;
+      background-color: #fff;
+    }    
   }
 }
 

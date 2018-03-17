@@ -56,6 +56,11 @@ body {
   min-height: 100vh;
 }
 
+::selection {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
 @mixin size-icons {
   width: 1.75rem;
   height: 1.75rem;
