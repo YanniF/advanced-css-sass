@@ -3,8 +3,8 @@
 [Advanced CSS and Sass: Take Your CSS to the Next Level!](https://www.udemy.com/advanced-css-and-sass "Advanced CSS and Sass")
 
 - Projects
-  - Natours
-  - Trillo
+  - [Natours](https://yannif.github.io/advanced-css-sass/Natours/)
+  - [Trillo](https://yannif.github.io/advanced-css-sass/Trillo/)
   - Nexter
 
 - Content
