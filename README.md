@@ -5,7 +5,7 @@
 - Projects
   - [Natours](https://yannif.github.io/advanced-css-sass/Natours/)
   - [Trillo](https://yannif.github.io/advanced-css-sass/Trillo/)
-  - Nexter
+  - [Nexter](https://yannif.github.io/advanced-css-sass/Nexter/)
 
 - Content
   - CSS architecture
